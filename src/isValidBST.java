@@ -1,4 +1,4 @@
-// 是否是合法的二叉树
+// 是否是合法的二叉搜索树
 public class isValidBST {
     public boolean isValidBST(TreeNode root) {
         return isBST(root, null, null);
