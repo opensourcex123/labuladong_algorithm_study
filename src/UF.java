@@ -23,7 +23,7 @@ public class UF {
         if (size[rootP] > size[rootQ]) {
             parent[rootQ] = rootP;
             size[rootP] += size[rootQ];
-        } else if (size[rootP] < size[rootQ]) {
+        } else {
             parent[rootP] = rootQ;
             size[rootQ] += size[rootP];
         }
