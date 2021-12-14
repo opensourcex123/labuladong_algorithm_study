@@ -33,7 +33,6 @@ public class advantageCount {
                 left++;
             }
         }
-
         return res;
     }
 }

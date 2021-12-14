@@ -10,6 +10,7 @@ public class carPooling {
         for (int re : res) {
             if (re > capacity) return false;
         }
+
         return true;
     }
 }
