@@ -16,8 +16,7 @@ public class calculate {
 
             if (c == '(') {
                 num = calculate(s.substring(i + 1));
-                i++;
-                while (s.charAt(i) != ')') i++;
+                i = move(s, i);
             }
 
             if ((!Character.isDigit(c) && c != ' ') || i == s.length() - 1) {
@@ -43,12 +42,15 @@ public class calculate {
         }
         return res;
     }
-}
 
-class Main2 {
-    public static void main(String[] args) {
-        calculate c = new calculate();
-        int num = c.calculate("(1+(4+5+2)-3)+(6+8)");
-        System.out.print(num);
+    private int move(String s, int i) {
+        int left = 0;
+        while (i < s.length()) {
+            if (s.charAt(i) == '(') left++;
+            if (s.charAt(i) == ')') left--;
+            if (left == 0) return i;
+            i++;
+        }
+        return i;
     }
 }
